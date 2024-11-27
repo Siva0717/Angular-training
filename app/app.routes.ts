@@ -1,27 +1,25 @@
 import { Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { TriggerComponent } from './trigger/trigger.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { FormComponent } from './form/form.component';
+import { CurrencyComponent } from './currency/currency.component';
 
-export const routes: Routes = [
-   {
-    
-path:'register-form',
-component: RegisterComponent,
-   } ,
-   {
-    path:'login-form',
-    component:LoginComponent,
-   },
-   {
-path:'',
-component:AppComponent,
-   },
-   {
-path:'trigger',
-component:TriggerComponent,
-   }
-   
+export const routes: Routes = [{
+    path:'pipes',
+    component:PipesComponent,
+},
+{
+    path:'form',
+    component:FormComponent,
+},
+{
+    path:'currency',
+    component:CurrencyComponent
+},
+{
+    path:'',
+    component:AppComponent,
+}
+
+
 ];
-
