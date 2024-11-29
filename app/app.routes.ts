@@ -1,25 +1,37 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { PipesComponent } from './pipes/pipes.component';
-import { FormComponent } from './form/form.component';
-import { CurrencyComponent } from './currency/currency.component';
+import { HeaderComponent } from './header/header.component';
+import { ServiceComponent } from './service/service.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
-export const routes: Routes = [{
-    path:'pipes',
-    component:PipesComponent,
-},
-{
-    path:'form',
-    component:FormComponent,
-},
-{
-    path:'currency',
-    component:CurrencyComponent
-},
-{
-    path:'',
-    component:AppComponent,
-}
+export const routes: Routes = [
+    {
+        path:'header',
+        component:HeaderComponent,
+        children:[
+            {
+                path:'home',
+                component:HomeComponent,
+            },
+            {
+                path:'service',
+                component:ServiceComponent,
 
+            },
+            
+            {
+                path:'about',
+                component:AboutComponent
+            },
+            {
+                path:'contact',
+                component:ContactComponent
+            }
+        ]
 
+    }
+    
 ];
+
