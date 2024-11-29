@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormComponent } from "./form/form.component";
-import { ButtonComponent } from "./button/button.component";
 
 @Component({
   selector: 'app-root',
- 
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  imports: [RouterOutlet]
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'myApp';
+  title = 'navbar';
 }
-
