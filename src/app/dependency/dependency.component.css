@@ -1,0 +1,9 @@
+ul {
+    display: flex;
+    
+    background-color: blanchedalmond;
+}
+ul li{
+    padding: 40px 40px;
+    list-style: none;
+}

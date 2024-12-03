@@ -6,11 +6,26 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DependencyComponent } from './dependency/dependency.component';
+import { LoginComponent } from './login/login.component';
+import { authGuard } from './guard.guard';
 
 export const routes: Routes = [
     {
         path:'dependency',
         component:DependencyComponent,
+    
+    },
+    {
+        path:'home',
+        component:HomeComponent, canActivate:[authGuard],
+    },
+    {
+        path:'login',
+        component:LoginComponent,
+    },
+    {
+        path:'**',
+        redirectTo:'/login'
     },
     {
         path:'header',
