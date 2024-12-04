@@ -10,8 +10,10 @@ export const authGuard: CanActivateFn = (route, state) => {
   
 
   if (isAuthenticated ==undefined) {
+    alert("Please login to Access Home page")
       router.navigate(['/login']);
       return false;
+      
   }
 
   return true;
