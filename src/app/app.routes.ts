@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DependencyComponent } from './dependency/dependency.component';
 import { LoginComponent } from './login/login.component';
 import { authGuard } from './guard.guard';
+import { PipesComponent } from './pipes/pipes.component';
 
 export const routes: Routes = [
     {
@@ -34,6 +35,10 @@ export const routes: Routes = [
             {
                 path:'home',
                 component:HomeComponent,
+            },
+            {
+                path:'pipe',
+                component:PipesComponent,
             },
             {
                 path:'service',
